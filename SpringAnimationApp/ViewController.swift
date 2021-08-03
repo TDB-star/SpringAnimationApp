@@ -27,14 +27,11 @@ class ViewController: UIViewController {
     @IBAction func runButtonPressed(_ sender: SpringButton) {
         setAnimation()
         animationView.animate()
-//        currentIndex += 1
-//        animationView.animation = animations[currentIndex % animations.count].rawValue
-//        animationView.animate()
     }
     
     func setAnimation() {
         currentIndex += 1
-        animationView.animation = anim[currentIndex].rawValue
+        animationView.animation = anim[currentIndex % anim.count].rawValue
     }
 }
 
