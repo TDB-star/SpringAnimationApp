@@ -13,25 +13,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var runButton: SpringButton!
     
-    
     private let anim = Spring.AnimationPreset.allCases
-    let animationCurves = Spring.AnimationCurve.allCases
-    
     private var currentIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        animationView.layer.cornerRadius = 12
+        infoLabel.text = "Press Button 😜"
     }
     
-    @IBAction func runButtonPressed(_ sender: SpringButton) {
+    @IBAction func runButtonPressed() {
         setAnimation()
         animationView.animate()
     }
-    
-    func setAnimation() {
+   
+    private func setAnimation() {
+        
         currentIndex += 1
         animationView.animation = anim[currentIndex % anim.count].rawValue
+        infoLabel.text = anim[currentIndex % anim.count].rawValue
+        runButton.setTitle(anim[(currentIndex + 1) % anim.count].rawValue, for: .normal)
     }
 }
 

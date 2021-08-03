@@ -22,6 +22,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="SXq-75-SxX"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myx-yJ-1YY" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="82" y="712" width="250" height="50"/>
@@ -40,7 +45,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="runButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYy-sZ-vpg"/>
+                                    <action selector="runButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Y9-jj-L8l"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0og-Jy-LAU">
